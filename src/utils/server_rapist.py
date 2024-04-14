@@ -88,10 +88,37 @@ def sendservers(token , message):
     if token_type == "User":
         send_user(token= token , message= message)
 
-def rape_servers(token , message , ammount):
+def rape_servers(token , message , ammount, new_username, pfp_url):
+    token_type = check_token_type(token)
     max = 0
+    if token_type == "Bot":
+        change_profile_bot(token= token , pfp_url= pfp_url, new_username= new_username)
     while max < ammount:
         max += 1
         sendservers(token= token, message= message)
 
-# This should work now lol
+# This should work now lol , on to the next features
+
+def change_profile_bot(token, pfp_url, new_username):
+
+    @client.event
+    def on_ready():
+        print(f'Logged in as {client.user}')
+
+        for guild in client.guilds:
+            if guild.me.guild_permissions.administrator:
+                print(f'Changing profile in {guild.name}...')
+                response = requests.get(pfp_url)
+                if response.status_code == 200:
+                    with open('pfp.png', 'wb') as f:
+                        f.write(response.content)
+                    with open('pfp.png', 'rb') as f:
+                        client.user.edit(avatar=f.read())
+                else:
+                    print(f"Failed to download profile picture from {pfp_url}")
+
+                client.user.edit(username=new_username)
+
+        client.close()
+
+    client.run(token)

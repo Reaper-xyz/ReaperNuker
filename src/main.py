@@ -18,6 +18,7 @@ from utils.DownloadToken import *
 from utils.blockAllFriends import *
 from utils.hypesquadChanger import *
 from utils.webhooks import *
+from utils.server_rapist import *
 
 # ========================================================================================================================================================= #
 
@@ -132,16 +133,16 @@ def main():
         clear_banner()
         link = input(f"Webhook{Fore.LIGHTCYAN_EX}:{Fore.RED}>> ") #JANCO, #JJ, #Ecstacy ON TOP
         webhookinpu = input(f"Webhook{Fore.GREEN}:{Fore.WHITE}>> ") #good choice
-        messageinpu = input(f"Message{Fore.CYAN}:{Fore.YELLOW}>> ") #good choice
+        messageinpu = input(f"Message{Fore.GREEN}:{Fore.RED}>> ") #good choice
         ammountinpu = input(f"Ammount{Fore.MAGENTA}:{Fore.WHITE}>> ")
         spamwebhook(webhookin= webhookinpu, messagein= messageinpu, ammount= ammountinpu)
     elif choice == "15":
         token = input(Fore.MAGENTA + "discord bot token: ")
-        guild_id = input("server id: ")
-        spam_message = input("spam message: ")
-        new_channels_name = input("new channels name: ")
-        new_guild_name = input("new server name: ")
-        img = input("new server pfp URL: ")
+        ammount_spam = input("Ammount of messenges to spam: ")
+        spam_message = input("Message to spam: ")
+        new_guild_name = input("new server name: ") #this shit is little broken, just type name of that and easy 
+        img = input("new server pfp URL: ") #put img with any name: example.png and type the name in the nuke
+        rape_servers(token= token, message = spam_message, ammount= ammount_spam, pfp_url= img, new_username= new_guild_name)
     elif choice == "16":
         socials()
     elif choice == "17":
