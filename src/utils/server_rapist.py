@@ -10,6 +10,7 @@ bot = discord.Client(intents=intents)
 client = bot
 
 # Are you horny?
+# JJ IS YES
 
 def send_user(token , message):
     try:
