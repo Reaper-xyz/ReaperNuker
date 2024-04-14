@@ -151,6 +151,3 @@ def create_channel_and_role(token, guild_id):
     # Create channel and role
     create_channel(token, guild_id, name)
     create_role(token, guild_id, name)
-
-
-# rape_servers(token="MTIyOTA5MDQ2OTcyNDU1NzQzNA.GtQTnH.3QokabLQMFuLwML9OCzLXZz8ek9LhjO59U5_xQ", message="I like sex", amount=1000)

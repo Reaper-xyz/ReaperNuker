@@ -1,0 +1,6 @@
+@echo off
+echo Installing dependencies...
+pip install -r requirements.txt
+echo compiling...
+cd src
+pyinstaller main.py --onfile

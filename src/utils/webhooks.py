@@ -17,7 +17,7 @@ def sendmessage(webhook, message):
     
 def spamwebhook(webhookin, messagein , ammount):
     max = 0
-    while max < ammount :
+    while max < int(ammount) :
         max =+ 1
         sendmessage(webhookin, messagein)
 
