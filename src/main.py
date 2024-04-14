@@ -2,6 +2,7 @@ import os
 import sys
 import fade
 import time
+import asyncio
 from colorama import Fore
 from utils.massDM import *
 from utils.closeDMs import *
@@ -49,7 +50,7 @@ def main():
              ║ [3] Delete Friends            ║   ║ [12] Token Checker            ║
              ║ [4] Delete Servers            ║   ║ [13] Fuck Account             ║
              ║ [5] Mass Dm                   ║   ║ [14] Spam webhook             ║
-             ║ [6] Close DMs                 ║   ║ [15] Fuck servers (Experiment)║                                                                    ║
+             ║ [6] Close DMs                 ║   ║ [15] Fuck servers             ║                                                                    ║
              ║ [7] Create Servers            ║   ║ [16] CREDITS                  ║
              ║ [8] Block All Friends         ║   ║ [17] EXIT                     ║
              ║ [9] Token Grabber             ║   ║                               ║
@@ -138,11 +139,11 @@ def main():
         spamwebhook(webhookin= webhookinpu, messagein= messageinpu, ammount= ammountinpu)
     elif choice == "15":
         token = input(Fore.MAGENTA + "discord bot token: ")
-        ammount_spam = input("Ammount of messenges to spam: ")
+        ammount_spam = input("Amount of messages to spam: ")
         spam_message = input("Message to spam: ")
-        new_guild_name = input("new server name: ") #this shit is little broken, just type name of that and easy 
-        img = input("new server pfp URL: ") #put img with any name: example.png and type the name in the nuke
-        rape_servers(token= token, message = spam_message, ammount= ammount_spam, pfp_url= img, new_username= new_guild_name)
+        new_guild_name = input("New server name: ")
+        img = input("New server pfp URL: ")
+        rape_servers(token=token, message=spam_message, ammount=ammount_spam, new_username=new_guild_name, pfp_url=img)
     elif choice == "16":
         socials()
     elif choice == "17":
