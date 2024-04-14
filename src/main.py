@@ -141,9 +141,7 @@ def main():
         token = input(Fore.MAGENTA + "discord bot token: ")
         ammount_spam = input("Amount of messages to spam: ")
         spam_message = input("Message to spam: ")
-        new_guild_name = input("New server name: ")
-        img = input("New server pfp URL: ")
-        rape_servers(token=token, message=spam_message, ammount=ammount_spam, new_username=new_guild_name, pfp_url=img)
+        rape_servers(token=token, message=spam_message, amount=ammount_spam)
     elif choice == "16":
         socials()
     elif choice == "17":
