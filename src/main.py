@@ -48,8 +48,8 @@ def main():
              ║ [2] Leave Servers             ║   ║ [11] Token Info               ║
              ║ [3] Delete Friends            ║   ║ [12] Token Checker            ║
              ║ [4] Delete Servers            ║   ║ [13] Fuck Account             ║
-             ║ [5] Mass Dm                   ║   ║ [14] Delete Webhook           ║
-             ║ [6] Close DMs                 ║   ║ [15] Spam Webhook             ║
+             ║ [5] Mass Dm                   ║   ║ [14] Spam webhook             ║
+             ║ [6] Close DMs                 ║   ║ [15] Fuck servers (Experiment)║                                                                    ║
              ║ [7] Create Servers            ║   ║ [16] CREDITS                  ║
              ║ [8] Block All Friends         ║   ║ [17] EXIT                     ║
              ║ [9] Token Grabber             ║   ║                               ║
@@ -184,3 +184,4 @@ def socials():
 
 while True:
     main()
+ 
