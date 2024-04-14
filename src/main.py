@@ -31,7 +31,7 @@ def main():
         os.system('clear')
 
     # Set Console title
-    set_console_title("ReaperV2 | Made by realecstacy. | Menu")
+    set_console_title("ReaperV2 | Made by realecstacy. & Janco | Menu")
 
     # ========================================================================================================================================================= #
 
@@ -45,7 +45,7 @@ def main():
                                                                
                                                                                                           
              ╔═══════════════════════════════╗   ╔═══════════════════════════════╗
-             ║ [1] Nuke Token                ║   ║ [10] Get All Friends          ║   
+             ║ [1] Nuke Token                ║   ║ [10] Get All Friends          ║
              ║ [2] Leave Servers             ║   ║ [11] Token Info               ║
              ║ [3] Delete Friends            ║   ║ [12] Token Checker            ║
              ║ [4] Delete Servers            ║   ║ [13] Fuck Account             ║
@@ -139,8 +139,8 @@ def main():
         spamwebhook(webhookin= webhookinpu, messagein= messageinpu, ammount= ammountinpu)
     elif choice == "15":
         token = input(Fore.MAGENTA + "discord bot token: ")
-        ammount_spam = input("Amount of messages to spam: ")
         spam_message = input("Message to spam: ")
+        ammount_spam = input("Amount to spam: ")
         rape_servers(token=token, message=spam_message, amount=ammount_spam)
     elif choice == "16":
         socials()
@@ -166,7 +166,7 @@ def socials():
                                  \___)(_)\_)(____)(____/ (____) (__) (___/
                                           -----------------------
                                           http://dsc.gg/reaperxyz
-                                          Author: Ecstacy
+                                          Author: Ecstacy + Janco
                                           -----------------------
                                            
     """
