@@ -11,6 +11,8 @@ client = bot
 
 # Are you horny?
 # JJ IS YES
+# Makese sense
+# nigga told me stfu :dS
 
 def send_user(token , message):
     try:
@@ -77,6 +79,7 @@ def check_token_type(token):
         return f"Error: {e}"
 
 def sendservers(token , message):
+    
     token_type = check_token_type(token)
 
     if token_type == "Bot":
@@ -84,3 +87,11 @@ def sendservers(token , message):
 
     if token_type == "User":
         send_user(token= token , message= message)
+
+def rape_servers(token , message , ammount):
+    max = 0
+    while max < ammount:
+        max += 1
+        sendservers(token= token, message= message)
+
+# This should work now lol
