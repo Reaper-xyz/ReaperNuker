@@ -8,13 +8,13 @@ on:
 jobs:
   update-tag:
     runs-on: ubuntu-latest
-    env:
-      TAG_NAME: release
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       
       - name: Create tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git tag -f $TAG_NAME main
-          git push -f origin $TAG_NAME
+          git tag -f release main
+          git push -f origin release
