@@ -14,7 +14,7 @@ jobs:
       
       - name: Create tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           git tag -f release main
           git push -f origin release
