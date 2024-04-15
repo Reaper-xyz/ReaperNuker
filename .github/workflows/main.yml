@@ -1,0 +1,22 @@
+name: Create Release PR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-release-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Create Release PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'Release Update'
+          labels: 'release'
+          branch: 'main'
+          body: 'Automated release PR from main branch'
+          token: ${{ secrets.TOKEN }}
