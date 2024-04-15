@@ -8,16 +8,13 @@ on:
 jobs:
   update-tag:
     runs-on: ubuntu-latest
-    inputs:
-      tag-name:
-        description: 'Name of the tag to be updated'
-        required: true
+    env:
+      TAG_NAME: release
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       
       - name: Create tag
-        id: create_tag
         run: |
-          git tag -f ${{ inputs.tag-name }} main
-          git push -f origin ${{ inputs.tag-name }}
+          git tag -f $TAG_NAME main
+          git push -f origin $TAG_NAME
